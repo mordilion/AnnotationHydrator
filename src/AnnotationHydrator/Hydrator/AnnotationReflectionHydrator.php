@@ -48,8 +48,9 @@ class AnnotationReflectionHydrator extends ReflectionHydrator
         foreach ($reflProperties as $property) {
             $annotations = $annotationReader->getPropertyAnnotations($property);
             $propertyName = $this->extractName($property->getName(), $object);
+            $annotation = $this->getAnnotation($annotations, Extract::class);
 
-            if ((!$annotation = $this->getAnnotation($annotations, Extract::class))
+            if ((!$annotation instanceof Extract)
                 || ($this->group !== null && $annotation->group !== $this->group)
                 || (!$this->getCompositeFilter()->filter($propertyName))
             ) {
@@ -82,14 +83,15 @@ class AnnotationReflectionHydrator extends ReflectionHydrator
 
             if ($property instanceof \ReflectionProperty) {
                 $annotations = $annotationReader->getPropertyAnnotations($property);
+                $annotation = $this->getAnnotation($annotations, Hydrate::class);
 
-                if ((!$annotation = $this->getAnnotation($annotations, Hydrate::class))
+                if ((!$annotation instanceof Hydrate)
                     || ($this->group !== null && $annotation->group !== $this->group)
                 ) {
                     continue;
                 }
 
-                $reflProperties[$name]->setValue($object, $this->hydrateValue($name, $value, $data));
+                $property->setValue($object, $this->hydrateValue($name, $value, $data));
             }
         }
 
