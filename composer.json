@@ -1,0 +1,26 @@
+{
+    "name": "mordilion/annotation-hydrator",
+    "description": "A small library to use hydrators with annotation rules",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henning Huncke",
+            "email": "mordilion@gmx.de",
+            "homepage": "http://www.devjunkie.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mordilion\\AnnotationHydrator\\": "src/AnnotationHydrator"
+        }
+    },
+    "require": {
+        "php": "7.2",
+        "zendframework/zend-hydrator": "^3.0",
+        "doctrine/annotations": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    }
+}
