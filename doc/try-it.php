@@ -14,14 +14,14 @@ AnnotationRegistry::registerLoader('class_exists');
 class TestClass
 {
     /**
-     * @Annotation\Extract(group="test1")
-     * @Annotation\Hydrate(group="test1")
+     * @Annotation\Extract(groups={"test1"})
+     * @Annotation\Hydrate(groups={"test1"})
      */
     public $name = 'name';
 
     /**
-     * @Annotation\Extract(group="test2")
-     * @Annotation\Hydrate(group="test2")
+     * @Annotation\Extract(groups={"test2"})
+     * @Annotation\Hydrate(groups={"test2"})
      */
     public $title = 'title';
 

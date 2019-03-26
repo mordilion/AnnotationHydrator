@@ -31,7 +31,7 @@ class ComposerStaticInit335b1cd6325bf30381ff39b533fa50a8
         ),
         'M' => 
         array (
-            'Mordilion\\AnnotationHydrator\\' => 29,
+            'Mordilion\\' => 10,
         ),
         'D' => 
         array (
@@ -64,9 +64,9 @@ class ComposerStaticInit335b1cd6325bf30381ff39b533fa50a8
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Mordilion\\AnnotationHydrator\\' => 
+        'Mordilion\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/AnnotationHydrator',
+            0 => __DIR__ . '/../..' . '/src/Mordilion',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
