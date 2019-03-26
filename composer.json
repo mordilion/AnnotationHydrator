@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "php": "7.2",
+        "php": ">=7.2.0",
         "zendframework/zend-hydrator": "^3.0",
         "doctrine/annotations": "^1.6"
     },
